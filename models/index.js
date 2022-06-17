@@ -2,9 +2,9 @@
 const mongoose = require('mongoose')
 
 // tell mongoose to connect to the mongo URI
-const uri = 'mongodb://localhost/introPractice425'
+const uri = 'mongodb://127.0.0.1/introPractice425'
 mongoose.connect(uri, {
-	useNewUrlParser: true
+	// useNewUrlParser: true
 })
 
 // use some db connection methods for console logs (debug)
@@ -22,5 +22,6 @@ db.on('error', err => {
 
 // export all of our models from this file
 module.exports = {
-	Drink: require('./drink')
+	Drink: require('./drink'), 
+	Blog: require('./blog')
 }
