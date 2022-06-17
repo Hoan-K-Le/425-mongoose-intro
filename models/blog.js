@@ -14,8 +14,13 @@ const BlogSchema = new mongoose.Schema({
 	title: String,
 	body: String,
 	// 1:M embedded document
-	// 1 blog can have amny comments
-	comments: [CommentSchema]
+	// 1 blog can have many comments
+	comments: [CommentSchema],
+	// blog can have one user who made it
+	blogger: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'User'
+	}
 })
 
 // only export blog schema

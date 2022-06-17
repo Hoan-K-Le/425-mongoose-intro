@@ -23,5 +23,6 @@ db.on('error', err => {
 // export all of our models from this file
 module.exports = {
 	Drink: require('./drink'), 
-	Blog: require('./blog')
+	Blog: require('./blog'),
+	User: require('./user')
 }
